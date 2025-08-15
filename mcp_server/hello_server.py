@@ -1,6 +1,5 @@
 from mcp.server.fastmcp import FastMCP
 import httpx
-import anyio
 
 mcp = FastMCP("hello-mcp")
 
@@ -16,7 +15,8 @@ def add(a: float, b: float) -> float:
 
 
 @mcp.tool()
-async def fastapi_sum(a: float, b: float) -> float:
+async def sum_gxo(a: float, b: float) -> float:
+    """Sum two numbers and return the sum the gxo way."""
     async with httpx.AsyncClient() as client:
         r = await client.post("http://127.0.0.1:8000/sum", json={"a": a, "b": b})
         r.raise_for_status()
