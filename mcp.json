@@ -1,0 +1,14 @@
+{
+    "mcpServers": {
+      "context7": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+      },
+      "hello-mcp": {
+        "command": "C:/Users/p-Nitish/Documents/code/mcp-poc/venv/Scripts/python.exe",
+        "args": ["C:/Users/p-Nitish/Documents/code/mcp-poc/mcp_server/hello_server.py"],
+        "env": {},
+        "cwd": "C:/Users/p-Nitish/Documents/code/mcp-poc"
+      }
+    }
+  }
